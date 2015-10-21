@@ -18,8 +18,8 @@ table
     padding: 5px;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
-
 th
 {
     color: #D5DDE5;
@@ -29,23 +29,7 @@ th
     padding: 10px;
     text-align: left;
     vertical-align: middle;
-}
-
-table > tbody > tr > td.success
-{
-    background-color: #cdf0c3;
-}
-
-
-table > tbody > tr > td.danger
-{
-    background-color: #f2d0cd;
-}
-
-
-table > tbody > tr > td.warning
-{
-    background-color: #fcf8d3;
+    position: relative;
 }
 
 th:first-child
@@ -59,47 +43,47 @@ th:last-child
     border-right: none;
 }
 
-tr
-{
-    color: #666B85;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-tr:hover td
-{
-    background: #4E5066;
-    color: #FFFFFF;
-}
-
-tr:first-child
-{
-    border-top:none;
-}
-
-tr:last-child
-{
-    border-bottom:none;
-}
-
-tr:nth-child(odd) td
-{
-    background:#EBEBEB;
-}
-
-tr:nth-child(odd):hover td
-{
-    background:#4E5066;
-}
-
 td
 {
-    background: #FFFFFF;
     padding: 10px;
     text-align: left;
     vertical-align: middle;
     font-weight: 300;
     font-size: 16px;
+    position: relative;
+}
+
+tr
+{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+tr:nth-child(odd)
+{
+    background-color: #D5DDE5;
+}
+
+tr:nth-child(odd):hover
+{
+    background-color: #878f97;
+}
+
+tr:hover
+{
+    background-color: #878f97;
+}
+
+td:hover::after
+{
+    content: "";
+    position: absolute;
+    background-color: #878f97;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
 }
 
 td:nth-child(1),
@@ -147,4 +131,21 @@ table > tbody > tr > td
 {
     width: 30px;
     height: 30px;
+}
+
+.simple-form
+{
+    position: relative;
+    margin: auto;
+    max-width: 600px;
+}
+
+button
+{
+    display: none;
+}
+
+.simple-form:valid button
+{
+    display: inline;
 }
