@@ -18,7 +18,6 @@ table
     padding: 5px;
     width: 100%;
     overflow: hidden;
-    z-index: 1;
 }
 th
 {
@@ -30,6 +29,7 @@ th
     text-align: left;
     vertical-align: middle;
     position: relative;
+    vertical-align: middle;
 }
 
 th:first-child
@@ -51,6 +51,7 @@ td
     font-weight: 300;
     font-size: 16px;
     position: relative;
+    vertical-align: middle;
 }
 
 tr
@@ -61,29 +62,29 @@ tr
 
 tr:nth-child(odd)
 {
-    background-color: #D5DDE5;
+    background-color: #f9f9f9;
 }
 
 tr:nth-child(odd):hover
 {
-    background-color: #878f97;
+    background-color: rgba(135, 143, 151, 0.42);
 }
 
 tr:hover
 {
-    background-color: #878f97;
+    background-color: rgba(135, 143, 151, 0.42);
 }
 
-td:hover::after
+td:hover::after,
+th:hover::after
 {
     content: "";
     position: absolute;
-    background-color: #878f97;
+    background-color: rgba(135, 143, 151, 0.42);
     left: 0;
     top: -5000px;
     height: 10000px;
     width: 100%;
-    z-index: -1;
 }
 
 td:nth-child(1),
@@ -95,36 +96,30 @@ td:nth-child(8)
     text-align: center;
 }
 
-td:nth-child(7) span
+.make-it-small
 {
     font-size: 10px;
 }
 
-.term-a:before
+.term-a::before
 {
     font-weight: bold;
     color: #d9534f;
     content: 'A';
 }
 
-.term-b:before
+.term-b::before
 {
     font-weight: bold;
     color: #337ab7;
     content: 'B';
 }
 
-.term-c:before
+.term-c::before
 {
     font-weight: bold;
     color: #5cb85c;
     content: 'C';
-}
-
-table > thead > tr > th,
-table > tbody > tr > td
-{
-    vertical-align: middle;
 }
 
 .ad-pic
@@ -132,6 +127,22 @@ table > tbody > tr > td
     width: 30px;
     height: 30px;
 }
+
+td.success
+{
+    background-color: rgba(205, 240, 195, 0.5);
+}
+
+td.danger
+{
+    background-color: rgba(242, 208, 205, 0.52);
+}
+
+td.warning
+{
+    background-color: rgba(252, 248, 211, 0.5);
+}
+
 
 .simple-form
 {
