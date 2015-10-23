@@ -11,7 +11,15 @@
             type="text"
             placeholder="Город отправления"
             value=""
-            onkeyup="this.setAttribute('value', this.value)">
+            onkeyup="this.setAttribute('value', this.value)"
+            name="city-field"
+            class="city-field">
+        <label for="d-filter-all">Прилет & Вылет</label>
+        <input type="radio" id="d-filter-all" name="d-filter" value="all" checked>
+        <label for="d-filter-arr">Прилет</label>
+        <input type="radio" id="d-filter-arr" name="d-filter" value="arrival">
+        <label for="d-filter-dep">Вылет</label>
+        <input type="radio" id="d-filter-dep" name="d-filter" value="departure">
         <table>
             <thead>
                 <tr>
@@ -27,169 +35,169 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><img alt="departures" class="ad-pic" src="departures.svg"></td>
-                    <td class="board">СУ 5816</td>
+                <tr class="departure" data-city="Orenburg">
+                    <td class="departure-pic align-cell"></td>
+                    <td class="board align-cell">СУ 5816</td>
                     <td>Orenburg Airlines</td>
-                    <td><img alt="Orenburg Airlines" src="air_comp_img/Orenburg_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Orenburg Airlines" src="air_comp_img/Orenburg_Airlines.png"></td>
                     <td>Боинг 737-800</td>
                     <td>Orenburg (Tsentralny)</td>
-                    <td>00:05<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-c"></td>
+                    <td class="align-cell">00:05<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-c align-cell"></td>
                     <td>Посадка закончена</td>
                 </tr>
-                <tr>
-                    <td><img alt="departures" class="ad-pic" src="departures.svg"></td>
-                    <td>ЮТ 265</td>
+                <tr class="departure" data-city="Kurgan">
+                    <td class="departure-pic align-cell"></td>
+                    <td class="align-cell">ЮТ 265</td>
                     <td>UTair Aviation</td>
-                    <td><img alt="UTair Aviation" src="air_comp_img/UTair_Aviation.png"></td>
+                    <td class="align-cell"><img alt="UTair Aviation" src="air_comp_img/UTair_Aviation.png"></td>
                     <td>Боинг 737-500</td>
                     <td>Kurgan</td>
-                    <td>00:40<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">00:40<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="warning">Задерживается до 01:30</td>
                 </tr>
-                <tr>
-                    <td><img alt="departures" class="ad-pic" src="departures.svg"></td>
-                    <td>ТК 9042</td>
+                <tr class="departure" data-city="Kurgan">
+                    <td class="departure-pic align-cell"></td>
+                    <td class="align-cell">ТК 9042</td>
                     <td>Turkish Airlines</td>
-                    <td><img alt="Turkish Airlines" src="air_comp_img/Turkish_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Turkish Airlines" src="air_comp_img/Turkish_Airlines.png"></td>
                     <td>Боинг 737-700</td>
                     <td>Kurgan</td>
-                    <td>00:40<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">00:40<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Вылетел в 01:22</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>Р2 5826</td>
+                <tr class="arrival" data-city="Chelyabinsk">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">Р2 5826</td>
                     <td>Orenburg Airlines</td>
-                    <td><img alt="Orenburg Airlines" src="air_comp_img/Orenburg_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Orenburg Airlines" src="air_comp_img/Orenburg_Airlines.png"></td>
                     <td>Боинг 737-700</td>
                     <td>Chelyabinsk</td>
-                    <td>00:50<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">00:50<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлялся в 03:07</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>UN 277</td>
+                <tr class="arrival" data-city="Aktobe">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">UN 277</td>
                     <td>Transaero Airlines</td>
-                    <td><img alt="Transaero Airlines" src="air_comp_img/Transaero_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Transaero Airlines" src="air_comp_img/Transaero_Airlines.png"></td>
                     <td>Боинг 737-700</td>
                     <td>Aktobe</td>
-                    <td>01:50<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">01:50<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлялся в 03:51</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>R2 3935</td>
+                <tr class="arrival" data-city="Kos">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">R2 3935</td>
                     <td>Georgian Airways</td>
-                    <td><img alt="Orenburg Airlines" src="air_comp_img/Orenburg_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Orenburg Airlines" src="air_comp_img/Orenburg_Airlines.png"></td>
                     <td>Боинг 737-800</td>
                     <td>Kos (Ippokratis)</td>
-                    <td>04:00<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-b"></td>
+                    <td class="align-cell">04:00<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-b align-cell"></td>
                     <td class="success">Приземлялся в 04:21</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>A9 935</td>
+                <tr class="arrival" data-city="Tbilisi">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">A9 935</td>
                     <td>Georgian Airways</td>
-                    <td><img alt="Georgian Airways" src="air_comp_img/Georgian_Airways.png"></td>
+                    <td class="align-cell"><img alt="Georgian Airways" src="air_comp_img/Georgian_Airways.png"></td>
                     <td>Боинг 737-800</td>
                     <td>Tbilisi</td>
-                    <td>09:05<br><span class="make-it-small">21.10.2015</span></td>
-                    <td>-</td>
+                    <td class="align-cell">09:05<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="align-cell">-</td>
                     <td class="danger">Отменен</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>UN 301</td>
+                <tr class="arrival" data-city="Tel-Aviv">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">UN 301</td>
                     <td>Transaero Airlines</td>
-                    <td><img alt="Transaero Airlines" src="air_comp_img/Transaero_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Transaero Airlines" src="air_comp_img/Transaero_Airlines.png"></td>
                     <td>Боинг 737-800</td>
                     <td>Tel Aviv Yafo (Ben Gurion Intl)</td>
-                    <td>10:00<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">10:00<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлился в 14:29</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>ГГ 721</td>
+                <tr class="arrival" data-city="Groznii">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">ГГ 721</td>
                     <td>Grozny Avia</td>
-                    <td><img alt="Grozny Avia" src="air_comp_img/Grozny_Avia.png"></td>
+                    <td class="align-cell"><img alt="Grozny Avia" src="air_comp_img/Grozny_Avia.png"></td>
                     <td>ЯК-42Д</td>
                     <td>Грозный</td>
-                    <td>14:30<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">14:30<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлился в 16:57</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>FZ 912</td>
+                <tr class="arrival" data-city="Dubai">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">FZ 912</td>
                     <td>flydubai</td>
-                    <td><img alt="flydubai" src="air_comp_img/flydubai.png"></td>
+                    <td class="align-cell"><img alt="flydubai" src="air_comp_img/flydubai.png"></td>
                     <td>Боинг 737-800</td>
                     <td>Dubai (Int.)</td>
-                    <td>14:50<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">14:50<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлился в 19:53</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>ПЛ 6154</td>
+                <tr class="arrival" data-city="Saint-Petersburg">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">ПЛ 6154</td>
                     <td>Rossiya Airlines</td>
-                    <td><img alt="Rossiya Airlines" src="air_comp_img/Rossiya_Airlines.png"></td>
+                    <td class="align-cell"><img alt="Rossiya Airlines" src="air_comp_img/Rossiya_Airlines.png"></td>
                     <td>Аэробус А319</td>
                     <td>Санкт-Петербург(Пулково)</td>
-                    <td>17:45<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">17:45<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлился в 19:11</td>
                 </tr>
-                <tr>
-                    <td><img alt="departures" class="ad-pic" src="departures.svg"></td>
-                    <td>LH 1471</td>
+                <tr class="arrival" data-city="Frankfurt">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">LH 1471</td>
                     <td>Lufthansa</td>
-                    <td><img alt="Lufthansa" src="air_comp_img/Lufthansa.png"></td>
+                    <td class="align-cell"><img alt="Lufthansa" src="air_comp_img/Lufthansa.png"></td>
                     <td>Аэробус А320</td>
                     <td>Frankfurt</td>
-                    <td>18:30<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">18:30<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Вылетел в 18:51</td>
                 </tr>
-                <tr>
-                    <td><img alt="arrivals" class="ad-pic" src="arrivals.svg"></td>
-                    <td>BT 7419</td>
+                <tr class="arrival" data-city="Riga">
+                    <td class="arrival-pic align-cell"></td>
+                    <td class="align-cell">BT 7419</td>
                     <td>airBaltic</td>
-                    <td><img alt="airBaltic" src="air_comp_img/airBaltic.png"></td>
+                    <td class="align-cell"><img alt="airBaltic" src="air_comp_img/airBaltic.png"></td>
                     <td>Боинг 737-700</td>
                     <td>Рига</td>
-                    <td>18:45<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">18:45<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td class="success">Приземлелся в 20:15</td>
                 </tr>
-                <tr>
-                    <td><img alt="departures" class="ad-pic" src="departures.svg"></td>
-                    <td>ДР 259</td>
+                <tr class="departure" data-city="Surgut">
+                    <td class="departure-pic align-cell"></td>
+                    <td class="align-cell">ДР 259</td>
                     <td>Победа</td>
-                    <td><img alt="Pobeda" src="air_comp_img/Pobeda.png"></td>
+                    <td class="align-cell"><img alt="Pobeda" src="air_comp_img/Pobeda.png"></td>
                     <td>Боинг 737-800</td>
                     <td>Сургут</td>
-                    <td>23:40<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">23:40<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td>Посадка. Заканчивается в 23:15. Выход 13A</td>
                 </tr>
-                <tr>
-                    <td><img alt="departures" class="ad-pic" src="departures.svg"></td>
-                    <td>ЮТ 573</td>
+                <tr class="departure" data-city="Min. Vody">
+                    <td class="departure-pic align-cell"></td>
+                    <td class="align-cell">ЮТ 573</td>
                     <td>UTair</td>
-                    <td><img alt="UTAir" src="air_comp_img/UTair_Aviation.png"></td>
+                    <td class="align-cell"><img alt="UTAir" src="air_comp_img/UTair_Aviation.png"></td>
                     <td>Боинг 737-400</td>
                     <td>Мин Воды</td>
-                    <td>23:50<br><span class="make-it-small">21.10.2015</span></td>
-                    <td class="term-a"></td>
+                    <td class="align-cell">23:50<br><span class="make-it-small">21.10.2015</span></td>
+                    <td class="term-a align-cell"></td>
                     <td>Идет регистрация. Заканчивается в 23:10</td>
                 </tr>
             </tbody>

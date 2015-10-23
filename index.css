@@ -18,6 +18,7 @@ table
     padding: 5px;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 th
 {
@@ -29,7 +30,6 @@ th
     text-align: left;
     vertical-align: middle;
     position: relative;
-    vertical-align: middle;
 }
 
 th:first-child
@@ -51,7 +51,6 @@ td
     font-weight: 300;
     font-size: 16px;
     position: relative;
-    vertical-align: middle;
 }
 
 tr
@@ -60,14 +59,16 @@ tr
     font-weight: normal;
 }
 
-tr:nth-child(odd)
+tr:nth-child(odd) td::before
 {
-    background-color: #f9f9f9;
-}
-
-tr:nth-child(odd):hover
-{
-    background-color: rgba(135, 143, 151, 0.42);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(234, 234, 234, 0.5);
+    z-index: -2;
 }
 
 tr:hover
@@ -85,13 +86,10 @@ th:hover::after
     top: -5000px;
     height: 10000px;
     width: 100%;
+    z-index: -1;
 }
 
-td:nth-child(1),
-td:nth-child(2),
-td:nth-child(4),
-td:nth-child(7),
-td:nth-child(8)
+.align-cell
 {
     text-align: center;
 }
@@ -101,21 +99,21 @@ td:nth-child(8)
     font-size: 10px;
 }
 
-.term-a::before
+.term-a::after
 {
     font-weight: bold;
     color: #d9534f;
     content: 'A';
 }
 
-.term-b::before
+.term-b::after
 {
     font-weight: bold;
     color: #337ab7;
     content: 'B';
 }
 
-.term-c::before
+.term-c::after
 {
     font-weight: bold;
     color: #5cb85c;
@@ -126,6 +124,20 @@ td:nth-child(8)
 {
     width: 30px;
     height: 30px;
+}
+
+.departure-pic
+{
+    background: url("departures.svg") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+.arrival-pic
+{
+    background: url("arrivals.svg") no-repeat;
+    background-size: 30px;
+    background-position: center;
 }
 
 td.success
@@ -159,4 +171,25 @@ button
 .simple-form:valid button
 {
     display: inline;
+}
+
+input[name="d-filter"][value="arrival"]:checked~table .departure,
+input[name="d-filter"][value="departure"]:checked~table .arrival
+{
+    display: none;
+}
+
+.city-field[value="Kurgan"]~table tr:not([data-city="Kurgan"]),
+.city-field[value="Orenburg"]~table tr:not([data-city="Orenburg"]),
+.city-field[value="Chelyabinsk"]~table tr:not([data-city="Chelyabinsk"]),
+.city-field[value="Aktobe"]~table tr:not([data-city="Aktobe"]),
+.city-field[value="Kos"]~table tr:not([data-city="Kos"]),
+.city-field[value="Tbilisi"]~table tr:not([data-city="Tbilisi"]),
+.city-field[value="Tel Aviv"]~table tr:not([data-city="Tel-Aviv"]),
+.city-field[value="Groznii"]~table tr:not([data-city="Groznii"]),
+.city-field[value="Dubai"]~table tr:not([data-city="Dubai"]),
+.city-field[value="Saint-Petersburg"]~table tr:not([data-city="Saint-Petersburg"]),
+.city-field[value="Frankfurt"]~table tr:not([data-city="Frankfurt"])
+{
+    display: none;
 }
