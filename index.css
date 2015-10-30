@@ -173,23 +173,23 @@ button
     display: inline;
 }
 
-input[name="d-filter"][value="arrival"]:checked~table .departure,
-input[name="d-filter"][value="departure"]:checked~table .arrival
+#d-filter-arr:checked~table .departure,
+#d-filter-dep:checked~table .arrival
 {
     display: none;
 }
 
-.city-field[value="Kurgan"]~table tr:not([data-city="Kurgan"]),
-.city-field[value="Orenburg"]~table tr:not([data-city="Orenburg"]),
-.city-field[value="Chelyabinsk"]~table tr:not([data-city="Chelyabinsk"]),
-.city-field[value="Aktobe"]~table tr:not([data-city="Aktobe"]),
-.city-field[value="Kos"]~table tr:not([data-city="Kos"]),
-.city-field[value="Tbilisi"]~table tr:not([data-city="Tbilisi"]),
-.city-field[value="Tel Aviv"]~table tr:not([data-city="Tel-Aviv"]),
-.city-field[value="Groznii"]~table tr:not([data-city="Groznii"]),
-.city-field[value="Dubai"]~table tr:not([data-city="Dubai"]),
-.city-field[value="Saint-Petersburg"]~table tr:not([data-city="Saint-Petersburg"]),
-.city-field[value="Frankfurt"]~table tr:not([data-city="Frankfurt"])
+.city-field[value="Kurgan"]~table tbody tr:not([data-city="Kurgan"]),
+.city-field[value="Orenburg"]~table tbody tr:not([data-city="Orenburg"]),
+.city-field[value="Chelyabinsk"]~table tbody tr:not([data-city="Chelyabinsk"]),
+.city-field[value="Aktobe"]~table tbody tr:not([data-city="Aktobe"]),
+.city-field[value="Kos"]~table tbody tr:not([data-city="Kos"]),
+.city-field[value="Tbilisi"]~table tbody tr:not([data-city="Tbilisi"]),
+.city-field[value="Tel Aviv"]~table tbody tr:not([data-city="Tel-Aviv"]),
+.city-field[value="Groznii"]~table tbody tr:not([data-city="Groznii"]),
+.city-field[value="Dubai"]~table tbody tr:not([data-city="Dubai"]),
+.city-field[value="Saint-Petersburg"]~table tbody tr:not([data-city="Saint-Petersburg"]),
+.city-field[value="Frankfurt"]~table tbody tr:not([data-city="Frankfurt"])
 {
     display: none;
 }
